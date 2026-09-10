@@ -8,7 +8,13 @@ def sleep_in(weekday, vacation):
     sleep_in(True, False) → False
     sleep_in(False, True) → True
     """
-    return
+    if weekday is True:
+        if vacation is True:
+            return True
+        else:
+            return False
+    else:
+        return True
 
 
 def monkey_trouble(a_smile, b_smile):
@@ -21,7 +27,10 @@ def monkey_trouble(a_smile, b_smile):
     monkey_trouble(False, False) → True
     monkey_trouble(True, False) → False
     """
-    return
+    if a_smile == b_smile:
+        return True
+    else:
+        return False
 
 
 def sum_double(a, b):
@@ -33,7 +42,10 @@ def sum_double(a, b):
     sum_double(3, 2) → 5
     sum_double(2, 2) → 8
     """
-    return
+    if a == b:
+        return (a + b) * 2
+    else:
+        return a + b
 
 
 def diff21(n):
@@ -45,7 +57,10 @@ def diff21(n):
     diff21(10) → 11
     diff21(21) → 0
     """
-    return
+    if n > 21:
+        return 2 * (n - 21)
+    else:
+        return abs(n - 21)
 
 
 def parrot_trouble(talking, hour):
@@ -58,7 +73,13 @@ def parrot_trouble(talking, hour):
     parrot_trouble(True, 7) → False
     parrot_trouble(False, 6) → False
     """
-    return
+    if talking is True:
+        if hour < 7 or hour > 20:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 def makes10(a, b):
@@ -69,7 +90,10 @@ def makes10(a, b):
     makes10(9, 9) → False
     makes10(1, 9) → True
     """
-    return
+    if (a + b) == 10 or a == 10 or b == 10:
+        return True
+    else:
+        return False
 
 
 def near_hundred(n):
@@ -80,7 +104,10 @@ def near_hundred(n):
     near_hundred(90) → True
     near_hundred(89) → False
     """
-    return
+    if abs(n - 100) <= 10 or abs(n - 200) <= 10:
+        return True
+    else:
+        return False
 
 
 def pos_neg(a, b, negative):
@@ -91,7 +118,15 @@ def pos_neg(a, b, negative):
     pos_neg(-1, 1, False) → True
     pos_neg(-4, -5, True) → True
     """
-    return
+    if a < 0 or b < 0:
+        if negative is True and a * b > 0:
+            return True
+        elif negative is False and a * b < 0:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 def not_string(str):
@@ -102,7 +137,10 @@ def not_string(str):
     not_string('x') → 'not x'
     not_string('not bad') → 'not bad'
     """
-    return
+    if "not" in str[:3]:
+        return str
+    else:
+        return "not " + str
 
 
 def missing_char(str, n):
@@ -113,7 +151,7 @@ def missing_char(str, n):
     missing_char('kitten', 0) → 'itten'
     missing_char('kitten', 4) → 'kittn'
     """
-    return
+    return str[:n] + str[n+1:]
 
 
 def front_back(str):
@@ -124,7 +162,10 @@ def front_back(str):
     front_back('a') → 'a'
     front_back('ab') → 'ba'
     """
-    return
+    if len(str) <= 1:
+        return str
+    else:
+        return str[len(str) - 1] + str[1:len(str) - 1] + str[0]
 
 
 def front3(str):
@@ -135,7 +176,11 @@ def front3(str):
     front3('Chocolate') → 'ChoChoCho'
     front3('abc') → 'abcabcabc'
     """
-    return
+    if len(str) <= 3:
+        return str * 3
+    else:
+        return str[0:3] * 3
+
 
 
 if __name__ == "__main__":
