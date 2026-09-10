@@ -12,7 +12,14 @@ def make_bricks(small, big, goal):
     make_bricks(3, 1, 9) → False
     make_bricks(3, 2, 10) → True
     """
-    return
+    if small + 5 * big < goal:
+        return False
+    else:
+        if goal % 5 > small:
+            return False
+        else:
+            return True
+
 
 
 def lone_sum(a, b, c):
@@ -26,7 +33,12 @@ def lone_sum(a, b, c):
     lone_sum(3, 2, 3) → 2
     lone_sum(3, 3, 3) → 0
     """
-    return
+    nums = [a, b, c]
+    total = 0
+    for x in nums:
+        if nums.count(x) == 1:
+            total += x
+    return total
 
 
 def lucky_sum(a, b, c):
@@ -40,7 +52,14 @@ def lucky_sum(a, b, c):
     lucky_sum(1, 2, 13) → 3
     lucky_sum(1, 13, 3) → 1
     """
-    return
+    nums = [a, b, c]
+    total = 0
+    for i in range(len(nums)):
+        if nums[i] == 13:
+            break
+        else:
+            total += nums[i]
+    return total
 
 
 def no_teen_sum(a, b, c):
