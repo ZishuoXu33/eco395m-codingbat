@@ -11,7 +11,16 @@ def cigar_party(cigars, is_weekend):
     cigar_party(50, False) → True
     cigar_party(70, True) → True
     """
-    return
+    if cigars >= 40:
+        if is_weekend is True:
+            return True
+        else:
+            if cigars <= 60:
+                return True
+            else:
+                return False
+    else:
+        return False
 
 
 def date_fashion(you, date):
@@ -29,7 +38,16 @@ def date_fashion(you, date):
     date_fashion(5, 2) → 0
     date_fashion(5, 5) → 1
     """
-    return
+    if you >= 8 or date >= 8:
+        if you <= 2 or date <= 2:
+            return 0
+        else:
+            return 2
+    else:
+        if you <= 2 or date <= 2:
+            return 0
+        else:
+            return 1
 
 
 def squirrel_play(temp, is_summer):
@@ -42,7 +60,16 @@ def squirrel_play(temp, is_summer):
     squirrel_play(70, False) → True
     squirrel_play(95, False) → False
     squirrel_play(95, True) → True"""
-    return
+    if is_summer is True:
+        if temp >= 60 and temp <= 100:
+            return True
+        else:
+            return False
+    else:
+        if temp >= 60 and temp <= 90:
+            return True
+        else:
+            return False
 
 
 def caught_speeding(speed, is_birthday):
@@ -57,7 +84,20 @@ def caught_speeding(speed, is_birthday):
     caught_speeding(60, False) → 0
     caught_speeding(65, False) → 1
     caught_speeding(65, True) → 0"""
-    return
+    if is_birthday is True:
+        if speed <= 65:
+            return 0
+        elif speed > 65 and speed <= 85:
+            return 1
+        elif speed > 85:
+            return 2
+    else:
+        if speed <= 60:
+            return 0
+        elif speed > 60 and speed <= 80:
+            return 1
+        elif speed > 80:
+            return 2
 
 
 def sorta_sum(a, b):
@@ -69,7 +109,10 @@ def sorta_sum(a, b):
     sorta_sum(3, 4) → 7
     sorta_sum(9, 4) → 20
     sorta_sum(10, 11) → 21"""
-    return
+    if a + b >= 10 and a + b <= 19:
+        return 20
+    else:
+        return a + b
 
 
 def alarm_clock(day, vacation):
@@ -84,7 +127,16 @@ def alarm_clock(day, vacation):
     alarm_clock(1, False) → '7:00'
     alarm_clock(5, False) → '7:00'
     alarm_clock(0, False) → '10:00'"""
-    return
+    if vacation is True:
+        if day == 6 or day == 0:
+            return 'off'
+        else:
+            return '10:00'
+    else:
+        if day == 6 or day == 0:
+            return '10:00'
+        else:
+            return '7:00'
 
 
 def love6(a, b):
@@ -98,7 +150,10 @@ def love6(a, b):
     love6(6, 4) → True
     love6(4, 5) → False
     love6(1, 5) → True"""
-    return
+    if a == 6 or b == 6 or a + b == 6 or abs(a - b) == 6:
+        return True
+    else:
+        return False
 
 
 def in1to10(n, outside_mode):
@@ -110,8 +165,16 @@ def in1to10(n, outside_mode):
     in1to10(5, False) → True
     in1to10(11, False) → False
     in1to10(11, True) → True"""
-    return
-
+    if outside_mode is True:
+        if n <= 1 or n >= 10:
+            return True
+        else:
+            return False
+    else:
+        if n >= 1 and n <= 10:
+            return True
+        else:
+            return False
 
 def near_ten(num):
     """
@@ -124,7 +187,10 @@ def near_ten(num):
     near_ten(12) → True
     near_ten(17) → False
     near_ten(19) → True"""
-    return
+    if num % 10 <= 2 or num % 10 >= 8:
+        return True
+    else:
+        return False
 
 
 if __name__ == "__main__":
