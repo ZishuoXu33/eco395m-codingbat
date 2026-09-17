@@ -7,7 +7,7 @@ def hello_name(str):
     hello_name('Alice') → 'Hello Alice!'
     hello_name('X') → 'Hello X!'
     """
-    return
+    return "Hello " + str + "!"
 
 
 def make_abba(str1, str2):
@@ -19,7 +19,7 @@ def make_abba(str1, str2):
     make_abba('Yo', 'Alice') → 'YoAliceAliceYo'
     make_abba('What', 'Up') → 'WhatUpUpWhat'
     """
-    return
+    return str1 + str2 * 2 + str1
 
 
 def make_tags(tag, word):
@@ -33,7 +33,7 @@ def make_tags(tag, word):
     make_tags('i', 'Hello') → '<i>Hello</i>'
     make_tags('cite', 'Yay') → '<cite>Yay</cite>'
     """
-    return
+    return "<" + tag + ">" + word + "</" + tag + ">"
 
 
 def make_out_word(out, word):
@@ -46,7 +46,7 @@ def make_out_word(out, word):
     make_out_word('<<>>', 'WooHoo') → '<<WooHoo>>'
     make_out_word('[[]]', 'word') → '[[word]]'
     """
-    return
+    return out[0:2] + word + out[2:]
 
 
 def extra_end(str):
@@ -60,7 +60,7 @@ def extra_end(str):
     extra_end('Hi') → 'HiHiHi'
 
     """
-    return
+    return str[-2:] * 3
 
 
 def first_two(str):
@@ -74,7 +74,7 @@ def first_two(str):
     first_two('abcdefg') → 'ab'
     first_two('ab') → 'ab'
     """
-    return
+    return str[0:2]
 
 
 def first_half(str):
@@ -87,7 +87,7 @@ def first_half(str):
     first_half('HelloThere') → 'Hello'
     first_half('abcdef') → 'abc'
     """
-    return
+    return str[0:len(str)//2]
 
 
 def without_end(str):
@@ -100,7 +100,7 @@ def without_end(str):
     without_end('java') → 'av'
     without_end('coding') → 'odin'
     """
-    return
+    return str[1:len(str)-1]
 
 
 def combo_string(str1, str2):
