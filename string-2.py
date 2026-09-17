@@ -6,7 +6,10 @@ def double_char(str):
     double_char('The') → 'TThhee'
     double_char('AAbb') → 'AAAAbbbb'
     double_char('Hi-There') → 'HHii--TThheerree'"""
-    return
+    new = ''
+    for i in range(len(str)):
+        new += str[i] * 2
+    return new
 
 
 def count_hi(str):
@@ -17,7 +20,11 @@ def count_hi(str):
     count_hi('abc hi ho') → 1
     count_hi('ABChi hi') → 2
     count_hi('hihi') → 2"""
-    return
+    count = 0
+    for i in range(len(str) - 1):
+        if str[i:i+2] == 'hi':
+            count += 1
+    return count
 
 
 def cat_dog(str):
@@ -28,7 +35,17 @@ def cat_dog(str):
     cat_dog('catdog') → True
     cat_dog('catcat') → False
     cat_dog('1cat1cadodog') → True"""
-    return
+    count_cat = 0
+    count_dog = 0
+    for i in range(len(str) - 2):
+        if str[i:i+3] == 'cat':
+            count_cat += 1
+        elif str[i:i+3] == 'dog':
+            count_dog += 1
+    if count_dog == count_cat:
+        return True
+    else:
+        return False
 
 
 def count_code(str):
