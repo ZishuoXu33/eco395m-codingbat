@@ -6,7 +6,10 @@ def first_last6(nums):
     first_last6([1, 2, 6]) → True
     first_last6([6, 1, 2, 3]) → True
     first_last6([13, 6, 1, 2, 3]) → False"""
-    return
+    if nums[0] == 6 or nums[-1] == 6:
+        return True
+    else:
+        return False
 
 
 def same_first_last(nums):
@@ -18,7 +21,10 @@ def same_first_last(nums):
     same_first_last([1, 2, 3]) → False
     same_first_last([1, 2, 3, 1]) → True
     same_first_last([1, 2, 1]) → True"""
-    return
+    if len(nums) >= 1 and nums[0] == nums[-1]:
+        return True
+    else:
+        return False
 
 
 def make_pi():
@@ -27,7 +33,7 @@ def make_pi():
 
 
     make_pi() → [3, 1, 4]"""
-    return
+    return [3, 1, 4]
 
 
 def common_end(arr1, arr2):
@@ -39,7 +45,10 @@ def common_end(arr1, arr2):
     common_end([1, 2, 3], [7, 3]) → True
     common_end([1, 2, 3], [7, 3, 2]) → False
     common_end([1, 2, 3], [1, 3]) → True"""
-    return
+    if arr1[0] == arr2[0] or arr1[-1] == arr2[-1]:
+        return True
+    else:
+        return False
 
 
 def sum3(nums):
@@ -50,7 +59,7 @@ def sum3(nums):
     sum3([1, 2, 3]) → 6
     sum3([5, 11, 2]) → 18
     sum3([7, 0, 0]) → 7"""
-    return
+    return nums[0] + nums[1] + nums[2]
 
 
 def rotate_left3(nums):
@@ -61,7 +70,7 @@ def rotate_left3(nums):
     rotate_left3([1, 2, 3]) → [2, 3, 1]
     rotate_left3([5, 11, 9]) → [11, 9, 5]
     rotate_left3([7, 0, 0]) → [0, 0, 7]"""
-    return
+    return  nums[1:] + [nums[0]]
 
 
 def reverse3(nums):
@@ -72,7 +81,7 @@ def reverse3(nums):
     reverse3([1, 2, 3]) → [3, 2, 1]
     reverse3([5, 11, 9]) → [9, 11, 5]
     reverse3([7, 0, 0]) → [0, 0, 7]"""
-    return
+    return nums[::-1]
 
 
 def max_end3(nums):
@@ -85,7 +94,10 @@ def max_end3(nums):
     max_end3([1, 2, 3]) → [3, 3, 3]
     max_end3([11, 5, 9]) → [11, 11, 11]
     max_end3([2, 11, 3]) → [3, 3, 3]"""
-    return
+    if nums[0] >= nums[-1]:
+        return [nums[0]] * 3
+    else:
+        return [nums[-1]] * 3
 
 
 def sum2(nums):
@@ -98,7 +110,14 @@ def sum2(nums):
     sum2([1, 2, 3]) → 3
     sum2([1, 1]) → 2
     sum2([1, 1, 1, 1]) → 2"""
-    return
+    total = 0
+    if len(nums) == 0:
+        return 0
+    elif len(nums) == 1:
+        return nums[0]
+    else:
+        return nums[0] + nums[1]
+        
 
 
 def middle_way(arr1, arr2):
