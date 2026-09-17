@@ -9,7 +9,11 @@ def count_evens(nums):
     count_evens([2, 2, 0]) → 3
     count_evens([1, 3, 5]) → 0
     """
-    return
+    count = 0
+    for i in range(len(nums)):
+        if nums[i] % 2 == 0:
+            count += 1
+    return count
 
 
 def big_diff(nums):
@@ -21,7 +25,7 @@ def big_diff(nums):
     big_diff([10, 3, 5, 6]) → 7
     big_diff([7, 2, 10, 9]) → 8
     big_diff([2, 10, 7, 2]) → 8"""
-    return
+    return max(nums) - min(nums)
 
 
 def centered_average(nums):
@@ -36,7 +40,9 @@ def centered_average(nums):
     centered_average([1, 2, 3, 4, 100]) → 3
     centered_average([1, 1, 5, 5, 10, 8, 7]) → 5
     centered_average([-10, -4, -2, -4, -2, 0]) → -3"""
-    return
+    nums.remove(max(nums))
+    nums.remove(min(nums))
+    return sum(nums) // len(nums)
 
 
 def sum13(nums):
